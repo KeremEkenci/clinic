@@ -1,0 +1,29 @@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="../../../assets/profile.png" alt="Card image cap">
+    <div class="card-body">
+        <label for="basic-url">Name</label>
+        <div class="input-group mb-3">
+            <input #name type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="{{profile.name}}">
+        </div>
+        <label for="basic-url">Surname</label>
+        <div class="input-group mb-3">
+            <input #surname type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="{{profile.surname}}">
+        </div>
+        <label for="basic-url">Email</label>
+        <div class="input-group mb-3">
+            <input #email type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="{{profile.email}}">
+        </div>
+        <label for="basic-url">Password</label>
+        <div class="input-group mb-3">
+            <input #password type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="{{profile.password}}">
+        </div>
+        <p class="status"></p>
+        <p class="status2"></p>
+
+        <button class="btn btn-primary"
+            (click)="updateProfile(name.value,surname.value,email.value,password.value)">Update profile</button>
+        <button class="btn btn-danger" (click)="deleteProfile()">Delete Profile</button><br>
+<button class="btn btn-danger" routerLink="/login">Exit</button>
+
+        </div>
+</div>
